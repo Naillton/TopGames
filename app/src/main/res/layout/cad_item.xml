@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!---Quando iniciamos um cardView é necessario trocar o nosso widget para cardview-->
+<!---Usando elevation para criar um estilo de sombra no nosso cardView e o corner radius para definir o raio da curva-->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="5dp"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="4dp"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/cardViewImg"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:contentDescription="@string/imagem_dos_jogos" />
+
+        <TextView
+            android:id="@+id/cardviewText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:layout_toEndOf="@+id/cardViewImg"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
