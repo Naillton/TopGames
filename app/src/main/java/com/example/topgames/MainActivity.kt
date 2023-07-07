@@ -2,18 +2,25 @@ package com.example.topgames
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
+import com.example.topgames.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        // definindo setContentView com binding
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         // definindo recycler
-        val recyclerView: RecyclerView = findViewById(R.id.recylcerView)
+        /*val recyclerView: RecyclerView = findViewById(R.id.recylcerView)
         recyclerView.layoutManager = LinearLayoutManager(
+            this,
+            LinearLayoutManager.VERTICAL,
+            false
+        )*/
+        binding.recylcerView.layoutManager = LinearLayoutManager(
             this,
             LinearLayoutManager.VERTICAL,
             false
@@ -30,6 +37,6 @@ class MainActivity : AppCompatActivity() {
 
         // criando adapter
         val adapter = MyAdapter(arrayList)
-        recyclerView.adapter = adapter
+        binding.recylcerView.adapter = adapter
     }
 }

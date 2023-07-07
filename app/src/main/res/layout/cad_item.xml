@@ -24,9 +24,10 @@
 
         <TextView
             android:id="@+id/cardviewText"
-            android:layout_width="wrap_content"
+            android:layout_width="156dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="75dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="60dp"
             android:layout_toEndOf="@+id/cardViewImg"
             android:padding="10dp"
             android:textSize="20sp"
