@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         arrayList.add(TopGamesData(R.drawable.card6, "Fortnite Mobile"))
 
         // criando adapter
-        val adapter = MyAdapter(arrayList)
-        binding.recylcerView.adapter = adapter
+        // val adapter = MyAdapter(arrayList)
+        binding.recylcerView.adapter = MyAdapter(arrayList)
     }
 }
